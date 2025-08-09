@@ -8,7 +8,18 @@
  */
 
 function getGrade(score) {
-  // 이곳에 코드를 작성합니다.
+  switch (true) {
+    case score >= 90:
+      return "A";
+    case score >= 80 && score < 90:
+      return "B";
+    case score >= 70 && score < 80:
+      return "C";
+    case score >= 60 && score < 70:
+      return "D";
+    default:
+      return "F";
+  }
 }
 
 console.log(getGrade(85)); // "B"가 출력되어야 함
