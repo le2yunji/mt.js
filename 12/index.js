@@ -1,7 +1,9 @@
 // 12. [심화문제] 배열에서 중복된 값을 제거하고 오름차순으로 정렬하는 함수를 만들어보세요.
 
 function removeDuplicatesAndSort(arr) {
-  // 이곳에 코드를 작성합니다.
+  const set = new Set(arr)
+  const newArr = [...set];
+  return newArr.sort((a, b) => a - b);
 }
 
 console.log(removeDuplicatesAndSort([3, 1, 4, 1, 5, 9, 2, 6, 5]));
